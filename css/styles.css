@@ -1,0 +1,1347 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300&family=Montserrat:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@200&display=swap');
+
+body{
+    margin: 0;
+}
+
+
+/* Estilos del encabezado de pagina, barra de navegación */
+
+.encabezado {
+    position: fixed;
+    top: 0;
+    z-index: 100000;
+    background-color: #252423;
+    display: flex;
+    width: 100%;
+    height: 65px;
+    color: whitesmoke;
+    font-family: 'Manrope';
+    font-size: 18px;
+    border-bottom: 1px solid rgba(255,255,255,.3);
+
+}
+
+/* #logo-pagina {
+    margin-right: 10px;
+    height: 65px;
+    width: 230px;
+    position: relative;
+    left: 0px;
+    top: 6px;
+    object-fit: cover;
+} */
+
+.enlaceInicio{
+    display: flex;
+}
+
+#logo{
+    display: flex;
+    align-items: center;
+    width: auto;
+    margin-left: 20px;
+    font-weight: 300;
+    letter-spacing: 0.3em;
+}
+
+#logo img{
+    width: 20px;
+    margin-left: 10px;
+    color: white;
+}
+
+#logo a:focus{
+    text-decoration: none !important;
+    text-underline-offset: 0;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    width: calc(100vw - 230px);
+}
+
+.lista {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.menu ul li a{
+    text-decoration: none;
+    color: whitesmoke;
+    padding: 10px;
+}
+
+.menu ul li a:hover, 
+.menu ul li a:focus{
+    border-bottom: 2px solid;
+}
+  
+.activo {
+    border-bottom: 2px solid;
+}
+
+
+/* Estilos de la página de inicio */
+
+h1{
+    background-color: #f2f2f2;
+    margin-top: 65px;
+    margin-bottom: 0px;
+    display: flex;
+    height: 110px;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-size: 25px;
+    font-family: 'Prompt', sans-serif;
+
+}
+
+
+.primerContenedorInicio{
+    height: calc(100vh - 175px);
+    margin: 0 0 3% 0;
+}
+
+.contenido {
+    position: relative;
+    height: 100%;
+    background-image: url('../imagenes/pagina-inicio.jpg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    justify-content: center;
+}
+
+.contenido p{
+    color: white;
+    font-family: 'Monserrat', sans-serif;
+    font-size: 55px;
+    margin: 0 20px 50px 20px;
+    font-weight: 600;
+    text-align: center;
+    user-select: none;
+}
+/* .columna-1{
+    width: 55%;
+}
+
+.columna-2{
+    width: 45%;
+    position: relative;
+} */
+
+/* .textoPrimerContenderInicio{
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    color: #252423;
+    font-family: 'Monserrat', sans-serif;
+    font-size: 55px;
+} */
+
+.segundoContenedorInicio{
+    position: relative;
+    height: calc(100vh - 65px);
+    margin: 0 0 2% 0;   ;
+    background-image: url('../imagenes/sostenibilidad.jpg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+h2{
+    display: flex;
+    flex-direction: column;
+    height: 80px;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-family: 'Monserrat', sans-serif;
+    margin: 0px;
+}
+
+#sostenibilidad{
+    font-size: 24px;
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+    justify-content: space-around;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: #505568;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.tercerContenedorInicio{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    position: relative;
+    height: calc(100vh - 110px - 55px);
+    background-image: url('../imagenes/imagen-tercer-contenedor.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.tercerContenedorInicio h2{
+    background-color: #fcfcfc;
+    margin-bottom: 15px;
+}
+
+
+/* Estilos de la página de productos */
+
+#galeria {
+    display: grid;
+    height: calc(100vh - 110px - 65px);
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    margin: 0 20px 0 20px;
+    justify-items: center;
+    align-content: space-evenly;
+}
+
+@media screen and (max-width: 768px) {
+    #galeria {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.galeria_img {
+    width: 75%;
+    height: 200px;
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.galeria_img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.6s ease;
+    cursor: pointer;
+}
+
+.galeria_img img:hover {
+    transform: scale(1.1);
+}
+
+.galeria_img figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-family: 'Quicksand', sans-serif;
+    color: #fff;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.ful-img{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    z-index: 1;
+}
+
+.ful-img img{
+    height: 70%;
+    /* width: 50%; */
+    object-fit: cover;
+}
+
+.ful-img span{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+/* Estilos de la página registro */
+
+#titulo-registro{
+    background-color: transparent;
+    position: absolute;
+    top: 0px;
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+
+#registro {
+    background-image: url(../imagenes/fondo-registro.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 65px;
+    height: calc(100vh - 65px);
+    width: 100%;
+}
+
+#formulario {
+    display: grid;
+    position: absolute;
+    width: 50%;
+    top: 110px;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 10px;
+    align-items: center;
+    padding: 30px 25px 25px 25px;
+    background-color: white;
+    /* border: solid 1px; */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.elemento-formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-between;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+#sexo:focus-visible{
+    border: 1px solid;
+}
+
+.elemento-texto{
+    width: 60%;
+    margin: 10px;
+    border-width: 1px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+}
+
+.elemento-check{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: 10px;
+    border-width: 1px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.entrada{
+    display: flex;
+    width: 90%;
+    height: 2rem;
+    border: none;
+    background: #F2F2F2;
+    border-radius: 3px;
+    margin-top: 5px;
+}
+
+.entrada:focus{
+    outline: none;
+}
+
+.mensaje-error {
+    height: 20px; /* Tamaño fijo del párrafo de error */
+    overflow: hidden; /* Oculta el contenido que excede el tamaño del párrafo */
+    color: red;
+    font-size: 12px;
+    margin-bottom: 0;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.errorForm {
+    display: flex;
+    justify-content: center;
+    height: 1rem; 
+    margin: 5px 0px;
+    color: red;
+    
+}
+
+#mensajeErrorForm{
+    display: flex;
+    justify-content: center;
+    height: 1rem;
+    margin: 5px 0px;
+    padding-bottom: 4%;
+}
+
+#registrarse{
+    display: flex;
+    justify-content: center;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: #0E2954;
+    color: white;
+    font-family: 'Monserrat', sans-serif;
+    font-size: 14px;
+}
+
+#registrarse:focus,
+#registrarse:hover{
+    background-color: #4F709C;
+}
+
+form textarea{
+    resize: none;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 3px;
+    height: 5rem;
+    font-family: 'Quicksand', sans-serif;
+    margin-top: 5px;
+}
+
+.elemento-boton{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+}
+
+.boton{
+    font-family: 'Prompt';
+    font-size: large;
+    display: flex;
+    background-color: #116D6E;
+    color: white;
+    padding: 7px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+.boton:focus{
+    outline: solid 1px;
+}
+
+/* button.boton{
+    font-family: 'Prompt', sans-serif;
+    font-size: 1.1rem;
+    padding: 6px 10px 6px 10px
+} */
+
+.boton:hover{
+    background-color: #457a46;
+    border-color:whitesmoke;
+}
+
+a.enlace{
+    display: flex; 
+    justify-content: center; 
+    text-decoration: none; 
+    border-bottom: none;
+    border-bottom: none;
+}
+
+.enlace:focus{
+    outline: solid 1px;
+}
+
+.enlace:visited{
+    color: #252423;
+}
+
+
+/* Estilos de la página contacto */
+
+#contacto{
+    height: 100vh;
+}
+
+#contacto h2{
+    margin-top: 50px;
+}
+
+#seccion-contacto{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    height: calc(100vh - 110px - 55px);
+}
+
+iframe{
+    width: 95%;
+    height: 75%;
+    border: solid 1px;
+}
+
+#mapa{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 5%;
+
+}
+
+#info-empresa {
+    display: flex;
+    justify-content: center;
+    margin-left: 5%;
+    width: 80%;
+    flex-direction: column;
+    font-family: 'Manrope', sans-serif;
+}
+
+#info-empresa h2{
+    align-items: start;
+    font-weight: 500;
+    letter-spacing: 0.3em;
+}
+
+#info-empresa h3{
+    font-weight: 400;
+}
+
+#info-empresa span,
+#info-empresa address,
+#info-empresa a,
+#info-empresa p{
+    font-weight: 300;
+}
+
+#info-empresa p{
+    margin-top: 0;
+}
+
+#info-empresa a{
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+a.enlaceInicio {
+    color: inherit;
+    text-decoration: none !important;
+    outline: none !important;
+}
+
+a.enlaceInicio:active {
+    outline: none !important;
+    text-decoration: none !important;
+}
+
+a.enlaceInicio:focus-visible {
+    outline: none !important;
+    text-decoration: none !important;
+}
+
+  
+
+
+
+/* Estilos de la página Login */
+
+#login{
+    background-image: url(../imagenes/fondo-registro1.jpg);
+    display: flex;
+    height: calc(100vh - 175px);
+    background-size: cover;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.formulario-login {
+    display: flex;
+    position: absolute;
+    margin-top: 3%;
+    background-color: white;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 30%;
+    border: #666;
+    border-style: solid;
+    border-radius: 15px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#mensajeEntrada{
+    display: flex;
+    justify-content: center;
+    height: 1rem;
+    margin: 5px 0px;
+    color: red;
+}
+
+.entrada-login{
+    display: flex;
+    height: 2rem;
+    width: 80%;
+}
+
+.entrada-login:focus{
+    outline: none;
+}
+
+.elemento-formulario-login{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-top: 10%;
+    align-items: center;
+}
+
+#entrar{
+    font-family: 'Prompt', sans-serif;
+    background-color: gray;
+}
+
+#entrar:hover,
+#entrar:focus{
+    background-color: #595260;
+}
+
+/* Estilos de la pagina perfil */
+
+#perfil {
+    background-image: url(../imagenes/fondo-perfil.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 65px;
+    height: calc(100vh - 65px);
+    width: 100%;
+}
+
+#formularioPerfil{
+    display: grid;
+    width: 60%;
+    position: absolute;
+    top: 80px;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    padding: 35px 25px 25px 25px;
+    background-color: white;
+}
+
+#modificar{
+    background-color: gray;
+    display: flex;
+    /* width: 15%; */
+    font-family: 'Prompt', sans-serif;
+}
+
+#modificar:hover,
+#modificar:focus{
+    background-color: #595260;
+}
+
+#guardar{
+    display: flex;
+    /* width: 30%; */
+}
+
+#guardar:hover,
+#guardar:focus{
+    background-color: #5F8D4E;
+}
+
+#cancelar{
+    background-color: #A75D5D;
+    display: flex;
+    /* width: 30%; */
+}
+
+#cancelar:hover,
+#cancelar:focus{
+    background-color: #B70404;
+}
+
+
+
+.merged {
+    grid-column: 1 / span 2; /* Solapa el div fusionado con el botón en dos columnas */
+}
+
+/* Estilos de la pagina citaciones */
+#citaciones{
+    /* background-image: url(../imagenes/fondo-perfil.jpg); */
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 65px;
+    /* height: calc(100vh - 65px); */
+    width: 100%;
+}
+
+.lista-citas{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    height: 20px;
+    justify-content: space-evenly;
+    padding: 0 20% 0 20%;
+    font-size: 20px;
+    font-family: 'Monserrat', sans-serif;
+}
+
+.seccionCitas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: 165px;
+    width: 100%;
+    height: calc(100vh - 230px);
+}
+
+#seccionMisCitas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: 165px;
+    width: 100%;
+    /* height: 100vh; */
+}
+
+.elemento-citas{
+    size: 1 rem;
+}
+
+.enlace-citas:hover{
+    cursor: pointer;
+}
+
+div.clase-cita{
+    border: 1px solid black;
+    display: flex;
+    width: 60%;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 10%;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#formulario-pedir-cita{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 5%;
+    padding-bottom: 2%;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    /* height: 50%; */
+    border: solid 1px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+#mensajeFormCitas{
+    display: flex; 
+    justify-content: center; 
+    height: 20px;
+    padding: 3.5% 0 3.5% 0;
+}
+
+.elemento-formulario-citas{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.entradaFormCitas{
+    height: 100%;
+    margin-top: 2%;
+}
+
+#enviarCita{
+    background-color: gray;
+    display: flex;
+    width: 25%;
+}
+
+#enviarCita:hover{
+    background-color: #595260;
+}
+
+/* Estilos de la pagina usuarios-admin.php */
+#usuarios{
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 65px;
+    height: calc(100vh - 65px);
+    width: 100%;
+    background-color: #f2f2f2;
+}
+
+.lista-usuarios{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    height: 20px;
+    justify-content: space-evenly;
+    padding: 0 20% 0 20%;
+    font-size: 20px;
+    font-family: 'Monserrat', sans-serif;
+}
+
+.enlace-usuarios:hover{
+    cursor: pointer;
+}
+
+.seccionUsuarios{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: 165px;
+    width: 100%;
+}
+
+div.clase-usuario{
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    flex-direction: row;
+}
+
+.tabla-usuarios {
+    width: 98%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+
+.tabla-usuarios td {
+    padding: 10px;
+    white-space: nowrap;
+    text-align: center;
+    height: 100%;
+}
+
+.tabla-usuarios td {    
+    overflow: hidden;
+}
+
+.tabla-usuarios input[type="text"],
+.tabla-usuarios input[type="password"],
+.tabla-usuarios input[type="date"],
+.tabla-usuarios select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 2px 0px;
+}
+
+.tabla-usuarios select {
+    width: 100%;
+    height: 100%; /* Ajusta la altura del select al 100% */
+    box-sizing: border-box;
+    padding: 2px 1px;
+}
+
+.tabla-usuarios .modificar,
+.tabla-usuarios .eliminar,
+.tabla-usuarios .guardar,
+.tabla-usuarios .cancelar {
+    margin: 0; 
+}
+
+.oculto {
+    display: none;
+}
+
+
+#seccionCrearUsuario{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    top: 165px;
+}
+
+#formualarioNuevoUsuario{
+    display: grid;
+    width: 60%;
+    position: absolute;
+    grid-template-columns: repeat(2, 1fr);
+    /* column-gap: 10%; */
+    align-items: center;
+    padding: 0 25px 25px 25px;
+    background-color: white;
+    border: solid 1px;
+}
+
+.pSeparacion{
+    margin: 5px;
+}
+
+#enviar{
+    display: flex;
+    justify-content: center;
+    width: 15%;
+    margin: 0 10px 0 10px;
+    padding: 9px 0px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: #0E2954;
+    color: white;
+    font-family: 'Monserrat', sans-serif;
+    font-size: 14px;
+}
+
+#enviar:focus,
+#enviar:hover{
+    background-color: #4F709C;
+}
+
+
+/* Estilos de la pestaña citaciones-admin */
+
+#citaciones-admin{
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 65px;
+    height: calc(100vh - 65px);
+    width: 100%;
+}
+
+.seccionCitasAdm{
+    /* display: flex; */
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: 200px;
+    width: 100%;
+    /* height: 100vh; */
+}
+
+#mensajeCitas{
+    display:flex; 
+    justify-content: center;
+    height: 20px;
+}
+
+.divCita {
+    display: flex;
+    justify-content: space-evenly;
+    width: 65%;
+    border: 1px solid black;
+    padding: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.divCita label{
+    margin-right: 10px;
+
+}
+
+.divCita input{
+    margin-right: 20px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+#seccionNuevaCitaUsuario{
+    height: calc(100vh - 265px);
+}
+
+#formNuevaCitaAdm{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    width: 40%;
+    height: 70%;
+    border: solid 1px;
+    /* border-radius: 5px; */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Estilos de la páginas Noticias-admin */
+#noticiasAdmin{
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 65px;
+    /* height: calc(100vh - 65px); */
+    width: 100%;
+}
+
+.enlace-noticias:hover{
+    cursor: pointer;
+}
+
+#seccionCrearNoticia{
+    justify-content: center;
+    width: 100%;
+    height: calc(100vh - 230px);
+    position: absolute;
+    top: 165px;
+}
+
+#formNoticias{
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    width: 60%;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 1px solid;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    padding-bottom: 3%;
+}
+
+.elementoFormNoticias{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+#mensajeNuevaNoticia{
+    display: flex; 
+    justify-content: center; 
+    height: 16px;
+}
+
+#publicar{
+    display: flex;
+    justify-content: center;
+    width: 15%;
+    margin: 0 10px 0 10px;
+    padding: 9px 0px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: #0E2954;
+    color: white;
+    font-family: 'Monserrat', sans-serif;
+    font-size: 14px;
+}
+
+#publicar:hover{
+    background-color: #4F709C;
+}
+
+#seccionNoticias{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.divNoticia{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 50vh;
+    justify-content: space-evenly;
+    padding: 1%;
+    border: solid 1px;
+}
+
+.divPrimeraFila {
+    display: flex;
+    align-items: center;
+
+}
+  
+.divPrimeraFila label {
+    margin-right: 10px;
+}
+  
+.divPrimeraFila .idNoticia,
+.divPrimeraFila .idUser {
+    flex: 1;
+    margin-right: 20px;
+}
+
+  
+.label{
+    font-family: 'Monserrat', sans-serif;
+    font-size: 14px;
+}
+
+.idNoticia,
+.idUser,
+.fecha,
+.titulo,
+.inputImagen,
+.texto{
+    font-family: 'Quicksand', sans-serif;
+}
+
+.texto{
+    line-height: 1.5em;
+    height: calc(5 * 1.5em);
+    border-radius: 4px;
+    resize: none;
+}
+
+
+.divTitulo,
+.divImagen,
+.divContenido{
+    display: flex;
+    flex-direction: column;
+}
+
+.divBotones{
+    display: flex;
+    justify-content: center;
+}
+
+.modificar,
+.eliminar,
+.guardar,
+.cancelar{
+    margin: 0 10px 0 10px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    padding: 7px 7px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.modificar{
+    background-color:#4A55A2;   /*Azul*/
+}
+
+.modificar:hover{
+    background-color: #4942E4;
+}
+
+.eliminar{
+    background-color: #850000;
+}
+
+.eliminar:hover{
+    background-color: #DC0000;
+}
+
+.guardar{
+    background-color: #557153;
+}
+
+.guardar:hover{
+    background-color: #5F8D4E;
+}
+
+.cancelar{
+    background-color: #B93160;
+}
+
+.cancelar:hover{
+    background-color: #B70404;
+}
+
+.mensajeNoticia{
+    display: flex;
+    justify-content: center;
+    height: 16px;
+}
+
+#mensajeNoticias{
+    display: flex;
+    justify-content: center;
+    height: 16px;
+}
+
+/* Formulario para nueva noticia */
+.labelForm{
+    font-family: 'Monserrat', sans-serif;
+    font-size: 14px;
+    margin-bottom: 1%;
+}
+ 
+/* Estilos de la pestaña noticias */
+
+#contenedorNoticias{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.imagenNoticia {
+    width: 100%;
+    height: 100%;
+}
+  
+.contenedorNoticia {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 70%;
+    height: 50vh;
+    align-items: center;
+    border: 1px solid;
+    margin: 2.5% 0;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 1% 3%;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.contenedorNoticia::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.55); 
+  }
+  
+.tituloNoticia,
+.contenidoNoticia,
+.publicado{
+    color: whitesmoke;
+    z-index: 1;
+    font-family: 'Prompt', sans-serif;;
+}
+
+.tituloNoticia{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.tituloNoticia,
+.contenedorNoticia{
+    text-align: justify;
+}
+
+.publicado{
+    font-style: italic;
+}
+
+/* Estilos del pie de página */
+
+footer {
+    display: flex;
+    justify-content: center;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #44443f ;
+    color: #666;
+    font-family: 'Manrope';     
+    text-align: center;
+}
+
+#logos{
+    display: flex;
+    justify-content: center;
+}
+
+.logo{
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    transition: all 0.4s; 
+    filter: invert(75%) sepia(0%) saturate(458%) hue-rotate(139deg) brightness(109%) contrast(94%);
+}
+
+.logo:hover{
+    cursor: pointer;
+    filter: invert(80%) sepia(59%) saturate(433%) hue-rotate(55deg) brightness(87%) contrast(86%);
+}
+
+#aviso-legal a{
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: #666;
+    text-align: justify;
+    white-space: nowrap;
+}
+
+#aviso-legal img {
+    display: inline-block;
+    width: 100px;
+}
+
+#pie{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: justify;
+}
+
+#pie p,
+#pie a{
+    font-weight: 300;
+    color: #bcb8b8;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
